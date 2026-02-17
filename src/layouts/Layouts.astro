@@ -1,5 +1,9 @@
 ---
-interface Props { title: string; }
+import '../styles/global.css';
+
+interface Props { 
+  title: string; 
+}
 const { title } = Astro.props;
 ---
 <!doctype html>
@@ -13,7 +17,7 @@ const { title } = Astro.props;
 	<body class="max-w-4xl mx-auto px-6 py-12 font-sans selection:bg-blue-500/30">
 		<slot />
 		<footer class="mt-20 pt-8 border-t border-slate-800 text-slate-500 text-sm">
-			© 2026 Karthik Menon | Zoekjaar Visa (NL) [cite: 3, 60] | Built with Astro & Science.
+			© 2026 Karthik Menon | Zoekjaar Visa (NL) | Built with Astro & Science.
 		</footer>
 	</body>
 </html>
