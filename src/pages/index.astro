@@ -1,75 +1,125 @@
+import Layout from '../layouts/Layout.astro';
 ---
-import Layout from '../layouts/Layouts.astro';
----
-<Layout title="Karthik Gokuladas Menon | People Analytics & Org Psych">
-	<main class="space-y-16">
-		<section class="space-y-4">
-			<div class="inline-block px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-medium border border-blue-500/20">
-				Available for People Analytics & EX Roles
+
+<Layout title="Karthik Menon - People Analytics & AI Strategy">
+	<!-- Hero Section -->
+	<section class="min-h-screen flex items-center justify-center px-6 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+		<div class="max-w-4xl mx-auto text-center">
+			<div class="mb-8">
+				<span class="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
+					Available for People Analytics & EX Roles
+				</span>
 			</div>
-			<h1 class="text-5xl font-bold tracking-tight text-white leading-tight">
-				Bridging Human Behavior <br/> <span class="text-blue-500">& Predictive Analytics.</span>
+			
+			<h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+				Karthik Menon
 			</h1>
-			<p class="text-xl text-slate-400 max-w-2xl leading-relaxed">
-				MSc Organizational Psychologist specializing in Workforce Planning and Data Engineering. I build scalable data products using Python, SQL, and Bayesian statistics.
+			
+			<p class="text-xl md:text-2xl text-slate-300 mb-4 font-light">
+				People Analytics • AI Strategy • Organizational Psychology
 			</p>
-			<div class="flex gap-4 pt-4">
-				<a href="https://www.linkedin.com/in/karthikmenon-info/" class="px-5 py-2 bg-white text-black font-semibold rounded-lg hover:bg-slate-200 transition">LinkedIn</a>
-				<a href="https://github.com/karthik-kgm2003" class="px-5 py-2 bg-slate-800 text-white font-semibold rounded-lg border border-slate-700 hover:bg-slate-700 transition">GitHub</a>
+			
+			<p class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+				Bridging <span class="text-blue-400 font-medium">data intelligence</span> with <span class="text-blue-400 font-medium">human-first</span> organizational design. Ensuring businesses don't lose human intelligence as they automate.
+			</p>
+			
+			<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+				<a href="/contact" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors shadow-lg shadow-blue-600/20">
+					Get In Touch
+				</a>
+				<a href="/about" class="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg font-medium transition-colors border border-slate-700">
+					Learn More
+				</a>
+				<a href="/resume.pdf" download class="px-8 py-3 border border-slate-600 hover:border-slate-500 text-slate-300 hover:text-white rounded-lg font-medium transition-colors">
+					Download CV
+				</a>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<section class="space-y-8">
-			<h2 class="text-2xl font-bold text-white border-l-4 border-blue-500 pl-4">The Lab: Predictive Models</h2>
-			<div class="grid md:grid-cols-2 gap-6">
-				<div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition group">
-					<h3 class="text-lg font-bold text-white mb-2">Longitudinal Wellbeing Model</h3>
-					<p class="text-sm text-slate-400 mb-4">Predictive attrition modeling using Hierarchical Bayesian Statistics to identify retention risks.</p>
-					<div class="flex gap-2">
-						<span class="text-[10px] px-2 py-1 bg-slate-800 rounded text-blue-400 font-mono">Python</span>
-						<span class="text-[10px] px-2 py-1 bg-slate-800 rounded text-blue-400 font-mono">Bayesian</span>
-					</div>
+	<!-- Value Proposition Section -->
+	<section class="py-24 px-6 bg-slate-900/50">
+		<div class="max-w-6xl mx-auto">
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+				My Framework for the 2026 AI Landscape
+			</h2>
+			
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<!-- Card 1 -->
+				<div class="bg-slate-800/50 border border-slate-700 rounded-lg p-6 hover:border-blue-500/50 transition-all hover:shadow-lg hover:shadow-blue-500/10">
+					<div class="text-blue-400 text-3xl mb-4">📊</div>
+					<h3 class="text-xl font-semibold mb-3 text-white">Evidence-Based People Analytics</h3>
+					<p class="text-slate-400 text-sm leading-relaxed">
+						Moving beyond basic reporting to build predictive models for workforce planning and employee well-being in the "AI-Plus" era.
+					</p>
 				</div>
-				<div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition">
-					<h3 class="text-lg font-bold text-white mb-2">AI Employee Self-Service MVP(HRAB)</h3>
-					<p class="text-sm text-slate-400 mb-4">Engineered a Python-based LLM chatbot to automate common employee queries and reduce tickets.</p>
-					<div class="flex gap-2">
-						<span class="text-[10px] px-2 py-1 bg-slate-800 rounded text-blue-400 font-mono">LLM</span>
-						<span class="text-[10px] px-2 py-1 bg-slate-800 rounded text-blue-400 font-mono">Product Mindset</span>
-					</div>
-				</div>
-			</div>
-		</section>
 
-		<section class="space-y-8">
-			<h2 class="text-2xl font-bold text-white border-l-4 border-blue-500 pl-4">Core Competencies</h2>
-			<div class="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4">
-				<div>
-					<h4 class="text-blue-500 font-bold text-sm uppercase tracking-widest mb-2">Data Stack</h4>
-					<ul class="text-sm text-slate-400 space-y-1">
-						<li>Python (Pandas, Scikit-learn)</li>
-						<li>SQL (Complex Joins) </li>
-						<li>Power BI (DAX) </li>
-					</ul>
+				<!-- Card 2 -->
+				<div class="bg-slate-800/50 border border-slate-700 rounded-lg p-6 hover:border-blue-500/50 transition-all hover:shadow-lg hover:shadow-blue-500/10">
+					<div class="text-blue-400 text-3xl mb-4">⚙️</div>
+					<h3 class="text-xl font-semibold mb-3 text-white">Structured Problem-Solving</h3>
+					<p class="text-slate-400 text-sm leading-relaxed">
+						Applying Six Sigma and Lean methodologies to eliminate process friction in hybrid and AI-augmented environments.
+					</p>
 				</div>
-				<div>
-					<h4 class="text-blue-500 font-bold text-sm uppercase tracking-widest mb-2">Psychology</h4>
-					<ul class="text-sm text-slate-400 space-y-1">
-						<li>JD-R Model Analysis</li>
-						<li>Psychometrics</li>
-						<li>Behavioral Science </li>
-					</ul>
+
+				<!-- Card 3 -->
+				<div class="bg-slate-800/50 border border-slate-700 rounded-lg p-6 hover:border-blue-500/50 transition-all hover:shadow-lg hover:shadow-blue-500/10">
+					<div class="text-blue-400 text-3xl mb-4">🔒</div>
+					<h3 class="text-xl font-semibold mb-3 text-white">Risk & Data Governance</h3>
+					<p class="text-slate-400 text-sm leading-relaxed">
+						Aligning GDPR and cybersecurity frameworks with human-centric business continuity planning.
+					</p>
 				</div>
-				<div>
-					<h4 class="text-blue-500 font-bold text-sm uppercase tracking-widest mb-2">Governance</h4>
-					<ul class="text-sm text-slate-400 space-y-1">
-						<li>GDPR Standards </li>
-						<li>EU-AI Act</li>
-						<li>Labour Laws</li>
-						<li>Workday HCM </li>
-					</ul>
+
+				<!-- Card 4 -->
+				<div class="bg-slate-800/50 border border-slate-700 rounded-lg p-6 hover:border-blue-500/50 transition-all hover:shadow-lg hover:shadow-blue-500/10">
+					<div class="text-blue-400 text-3xl mb-4">🎯</div>
+					<h3 class="text-xl font-semibold mb-3 text-white">Leadership in Transformation</h3>
+					<p class="text-slate-400 text-sm leading-relaxed">
+						Guiding stakeholders through the psychological shifts required for digital and AI adoption.
+					</p>
 				</div>
 			</div>
-		</section>
-	</main>
+		</div>
+	</section>
+
+	<!-- Quick Stats Section -->
+	<section class="py-24 px-6">
+		<div class="max-w-6xl mx-auto">
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+				<div class="text-center">
+					<div class="text-4xl font-bold text-blue-400 mb-2">MSc</div>
+					<div class="text-slate-400 text-sm">Work & Org Psychology</div>
+				</div>
+				<div class="text-center">
+					<div class="text-4xl font-bold text-blue-400 mb-2">15+</div>
+					<div class="text-slate-400 text-sm">Certifications</div>
+				</div>
+				<div class="text-center">
+					<div class="text-4xl font-bold text-blue-400 mb-2">3+</div>
+					<div class="text-slate-400 text-sm">Technical Stacks</div>
+				</div>
+				<div class="text-center">
+					<div class="text-4xl font-bold text-blue-400 mb-2">100%</div>
+					<div class="text-slate-400 text-sm">Human-First</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-24 px-6 bg-gradient-to-b from-slate-950 to-slate-900">
+		<div class="max-w-4xl mx-auto text-center">
+			<h2 class="text-3xl md:text-4xl font-bold mb-6">
+				Let's Build Resilient, High-Performance Organizations
+			</h2>
+			<p class="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
+				Looking to connect with professionals in Strategy, Human Capital, Digital Transformation, and Risk Advisory who believe the future of work must be both data-intelligent and human-first.
+			</p>
+			<a href="/contact" class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors shadow-lg shadow-blue-600/20">
+				Start a Conversation
+			</a>
+		</div>
+	</section>
 </Layout>
