@@ -1,11 +1,8 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite'; // The modern 2026 way
 
 export default defineConfig({
-  // Replace with your actual GitHub username
-  site: 'https://karthikmenon.github.io', 
-  // If your repo is karthikmenon.github.io, use '/'. 
-  // If your repo is named 'portfolio', use '/portfolio/'
-  base: '/pwp/', 
-  integrations: [tailwind()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
