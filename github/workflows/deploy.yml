@@ -1,29 +1,43 @@
 name: Deploy to GitHub Pages
+
 on:
   push:
-    branches: [ main ] # Trigger on every push to the main branch
+    branches: [ main ] # Triggers on every push to your main branch
+
+# This block prevents multiple runs from clogging the queue
+concurrency:
+  group: "pages"
+  cancel-in-progress: true 
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install Node.js
+
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # Use latest stable Node version
+          node-version: 20
+          cache: 'npm' # Speeds up future builds by caching dependencies
+
       - name: Install dependencies
         run: npm install
-      - name: Build Astro site
+
+      - name: Build Astro
         run: npm run build
-      - name: Upload build artifact
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # Astro outputs the final site to the dist folder
+          path: ./dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
