@@ -2,22 +2,63 @@
 import '../styles/global.css';
 
 interface Props { 
-  title: string; 
+  title: string;
+  description?: string;
 }
-const { title } = Astro.props;
+const { title, description = "Karthik Menon - People Analytics & AI Strategy Professional" } = Astro.props;
 ---
 <!doctype html>
-<html lang="en" class="bg-slate-950 text-slate-200">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
 	</head>
-	<body class="max-w-4xl mx-auto px-6 py-12 font-sans selection:bg-blue-500/30">
-		<slot />
-		<footer class="mt-20 pt-8 border-t border-slate-800 text-slate-500 text-sm">
-			© 2026 Karthik Menon | Zoekjaar Visa (NL) | Built with Astro & Science.
+	<body class="bg-slate-950 text-slate-200 font-sans antialiased">
+		<!-- Navigation -->
+		<nav class="fixed top-0 w-full bg-slate-950/80 backdrop-blur-md border-b border-slate-800 z-50">
+			<div class="max-w-6xl mx-auto px-6 py-4">
+				<div class="flex items-center justify-between">
+					<a href="/" class="text-xl font-bold text-blue-400 hover:text-blue-300 transition-colors">
+						KM
+					</a>
+					<div class="flex gap-8">
+						<a href="/" class="text-slate-300 hover:text-white transition-colors text-sm">Home</a>
+						<a href="/about" class="text-slate-300 hover:text-white transition-colors text-sm">About</a>
+						<a href="/experience" class="text-slate-300 hover:text-white transition-colors text-sm">Experience</a>
+						<a href="/education" class="text-slate-300 hover:text-white transition-colors text-sm">Education</a>
+						<a href="/skills" class="text-slate-300 hover:text-white transition-colors text-sm">Skills</a>
+						<a href="/projects" class="text-slate-300 hover:text-white transition-colors text-sm">Projects</a>
+						<a href="/contact" class="text-slate-300 hover:text-white transition-colors text-sm">Contact</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Main Content -->
+		<main class="pt-20">
+			<slot />
+		</main>
+
+		<!-- Footer -->
+		<footer class="mt-32 border-t border-slate-800 bg-slate-950">
+			<div class="max-w-6xl mx-auto px-6 py-12">
+				<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+					<div class="text-slate-400 text-sm">
+						© 2026 Karthik Menon | Zoekjaar Visa (NL)
+					</div>
+					<div class="flex gap-6">
+						<a href="https://www.linkedin.com/in/karthikmenon-info/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-400 transition-colors">
+							LinkedIn
+						</a>
+						<a href="mailto:karthik@karthikmenon.info" class="text-slate-400 hover:text-blue-400 transition-colors">
+							Email
+						</a>
+					</div>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>
