@@ -1,13 +1,9 @@
-name: Production Deploy V2
+name: Production Deploy V3
 
 on:
   push:
-    branches: [ main ] # Triggers on every push to your main branch
-
-# This block prevents multiple runs from clogging the queue
-concurrency:
-  group: "pages"
-  cancel-in-progress: true 
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,19 +16,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
+      
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm' # Speeds up future builds by caching dependencies
-
+          node-version: '20'
+      
       - name: Install dependencies
-        run: npm install
-
-      - name: Build Astro
+        run: npm ci
+      
+      - name: Build
         run: npm run build
-
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
